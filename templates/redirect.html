@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .details-box {
+            background-color: #ffffff;
+            max-width: 400px;
+            margin: 20px;
+            padding: 40px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            color: #555555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/get" method="post">
+        <div class="details-box">
+            <h2>Details</h2>
+            <label for="department">Qualification:</label>
+            <input type="text" id="department" name="department" required>
+
+            <label for="age">Age (21-60):</label>
+            <input type="number" id="age" name="age" required min="21" max="60">
+
+            <label for="experience">Experience:</label>
+            <input type="number" id="experience" name="experience" required>
+
+            <input type="submit" value="Submit">
+        </div>
+        <div class="salary-box">
+            <h1>Your Expected Salary Is</h1>
+            <h1 class="medium-salary">Rs/- {{salary}}</h1>
+          </div>
+    </form>
+</body>
+
+</html>

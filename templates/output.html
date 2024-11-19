@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .salary-box {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .low-salary {
+      color: #e74c3c;
+    }
+
+    .medium-salary {
+      color: #f39c12;
+    }
+
+    .high-salary {
+      color: #2ecc71;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="salary-box">
+    <h1>Your Expected Salary Is</h1>
+    <h1 class="medium-salary">Rs/- {{salary}}</h1>
+  </div>
+</body>
+
+</html>

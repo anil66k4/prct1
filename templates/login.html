@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Form</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 28px;
+        }
+
+        label {
+            color: #555555;
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function check1() {
+            if (document.form1.email_id.value == "") {
+                alert("Enter email id");
+                document.form1.email_id.focus();
+                return false;
+            } else if (document.form1.password.value == "") {
+                alert("Enter password");
+                document.form1.password.focus();
+                return false;
+            } else {
+                if (document.form1.password.value == "password") {
+                    return true;
+                } else {
+                    alert("Incorrect password");
+                    document.form1.password.value == "";
+                    document.form1.password.focus();
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="/read" name="form1" onsubmit="return(check1());">
+        <h1>Login Form</h1>
+        <label>Email ID:</label>
+        <input type="text" name="email_id" placeholder="Enter email id"><br><br>
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Enter password"><br><br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+
+</html>
