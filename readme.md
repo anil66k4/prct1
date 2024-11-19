@@ -24,7 +24,7 @@ This is a prototype web application that predicts salaries using a custom-traine
 ### Installation Steps
 1. Clone the repository
    ```
-   git clone [your-repository-url]
+   git clone https://github.com/anil66k4/prct1.git
    ```
 
 2. Create a virtual environment
